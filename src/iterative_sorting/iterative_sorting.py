@@ -28,5 +28,18 @@ def bubble_sort(arr):
 
 # STRETCH: implement the Count Sort function below
 def count_sort(arr, maximum=-1):
+    maximum = max(arr)
+    # create a count array to store the count of each unique object
+    # initially the count of all elements is 0
+    count = [0 for i in range(maximum + 1)]
+    # count each element in the given array and place the count at the
+    # appropriate index
+    for x in arr:
+        count[x] += 1
 
+    a = 0
+    for i in range(maximum + 1):
+        for j in range(count[i]):
+            arr[a] = i
+            a += 1
     return arr
