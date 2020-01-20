@@ -28,6 +28,12 @@ def bubble_sort(arr):
 
 # STRETCH: implement the Count Sort function below
 def count_sort(arr, maximum=-1):
+    if len(arr) == 0:
+        return []
+
+    if min(arr) < 0:
+        return "Error, negative numbers not allowed in Count Sort"
+
     maximum = max(arr)
     # create a count array to store the count of each unique object
     # initially the count of all elements is 0
