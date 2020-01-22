@@ -22,11 +22,9 @@ def merge(arrA, arrB):
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort(arr):
-    if len(arr) == 1:
+    if len(arr) <= 1:
         return arr
     else:
-        # TO-DO
-        # if len(arr) > 1:
         l1 = arr[:len(arr) // 2]
         l2 = arr[len(arr) // 2:]
         # recursively call merge_sort() on LHS
